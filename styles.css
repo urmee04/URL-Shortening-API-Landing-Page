@@ -139,6 +139,13 @@ nav .nav-links {
   font-size: 1rem;
 }
 
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  display: none;
+}
+
 #activate-btn {
   background-color: #2acfcf;
   color: white;
@@ -146,6 +153,10 @@ nav .nav-links {
   padding: 1rem 2rem;
   border-radius: 8px;
   font-weight: 700;
+}
+
+#url-input.error {
+  border: 2px solid red;
 }
 
 /* Advanced Statistics */
