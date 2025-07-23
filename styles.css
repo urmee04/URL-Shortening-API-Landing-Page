@@ -196,7 +196,7 @@ nav .menu-btn {
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 8px;
-  font-family: sans-serif;
+  font-family: "poppins";
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -247,7 +247,7 @@ nav .menu-btn {
 
 /* Optional: Add hover effect */
 .copy-link-btn:hover {
-  opacity: 0.9;
+  background-color: #98f5f5;
 }
 
 /* For very small screens, you might want to add a media query */
