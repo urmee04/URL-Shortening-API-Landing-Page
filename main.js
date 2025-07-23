@@ -58,3 +58,31 @@ async function shortenUrl(urlLink) {
     console.error("Network error:", error);
   }
 }
+
+function displayToLinkHistory(originalLink, shortLink) {
+  const linkItem = document.createElement("div");
+  linkItem.classList.add("item");
+
+  linkItem.innerHTML = `
+      <div class="link-item-content">
+    <p class="original-link">${originalLink}</p>
+    <div class="link-actions">
+      <a href="${shortLink}" target="_blank" class="short-link">${shortLink}</a>
+      <button class="copy-link-btn">Copy</button>
+    </div>
+  </div>
+    `;
+
+  linksHistory.prepend(linkItem); // Add latest first
+
+  const copyBtn = linkItem.querySelector(".copy-link-btn");
+  copyBtn.addEventListener("click", () => {
+    navigator.clipboard.writeText(shortLink);
+    copyBtn.textContent = "copied!";
+    copyBtn.style.backgroundColor = "#3b3054";
+    setTimeout(() => {
+      copyBtn.textContent = "copy";
+      copyBtn.style.backgroundColor = "#2acfcf";
+    }, 1500);
+  });
+}
