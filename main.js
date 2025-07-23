@@ -86,3 +86,16 @@ function displayToLinkHistory(originalLink, shortLink) {
     }, 1500);
   });
 }
+
+/**
+ * Saves a pair of original and shortened links to localStorage.
+ * - Retrieves the existing array of links from localStorage (or initializes an empty one).
+ * - Adds the new link pair to the array.
+ * - Stores the updated array back into localStorage.
+ */
+
+function saveToLocalStorage(original, short) {
+  const saved = JSON.parse(localStorage.getItem("shortenedLinks")) || [];
+  saved.push({ original, short });
+  localStorage.setItem("shortenedLinks", JSON.stringify(saved));
+}
