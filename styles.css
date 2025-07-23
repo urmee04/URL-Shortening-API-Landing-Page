@@ -333,6 +333,10 @@ nav .menu-btn {
   margin-bottom: 1rem;
 }
 
+.boost-links button:hover {
+  background-color: #98f5f5;
+}
+
 /* Footer */
 
 footer {
