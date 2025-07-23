@@ -366,11 +366,21 @@ footer .logo img {
   text-decoration: none;
   color: #bfbfbf;
   font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.footer-section li a:hover {
+  color: #2acfcf;
 }
 
 .footer-section a.social-media-icon img {
   width: 20px;
   margin-right: 1rem;
+}
+
+.footer-section a.social-media-icon img:hover {
+  filter: brightness(0) saturate(100%) invert(84%) sepia(23%) saturate(1450%)
+    hue-rotate(119deg) brightness(88%) contrast(92%);
 }
 
 .attribution {
