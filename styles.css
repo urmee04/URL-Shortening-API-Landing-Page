@@ -245,12 +245,9 @@ nav .menu-btn {
   flex-shrink: 0;
 }
 
-/* Optional: Add hover effect */
 .copy-link-btn:hover {
   background-color: #98f5f5;
 }
-
-/* For very small screens, you might want to add a media query */
 
 /* Advanced Statistics */
 .advanced-statistics {
@@ -275,7 +272,7 @@ nav .menu-btn {
 .statistics-cards::before {
   content: "";
   position: absolute;
-  top: 50%; /* adjust this to align with icons */
+  top: 50%;
   display: block;
   width: 80%;
   height: 8px;
@@ -346,7 +343,7 @@ footer {
 }
 
 footer .logo img {
-  filter: brightness(0) invert(1); /*cnverts dark image to white*/
+  filter: brightness(0) invert(1); /*converts dark image to white*/
 }
 
 .footer-grid {
@@ -387,6 +384,7 @@ footer .logo img {
     hue-rotate(119deg) brightness(88%) contrast(92%);
 }
 
+/* Attribution */
 .attribution {
   text-align: center;
   font-size: 0.8rem;
