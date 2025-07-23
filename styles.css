@@ -44,28 +44,41 @@ nav {
 
 nav .nav-links {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  font-weight: 700;
   list-style: none;
 }
-.nav-links li a {
+nav .nav-links li a {
   margin-right: 8rem;
+  color: #9e9aa7;
+  text-decoration: none;
 }
 
-.nav-links li a,
+nav .nav-links li a:hover {
+  color: #161516;
+  font-weight: bold;
+}
+
 .nav-auth a {
   text-decoration: none;
   color: #9e9aa7;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .nav-auth .signup-btn {
   background-color: #2acfcf;
   color: white;
-  padding: 1rem 3rem;
-  border-radius: 35px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
   font-weight: 700;
   text-align: center;
+}
+
+.nav-auth .signup-btn:hover {
+  background-color: #98f5f5;
+}
+
+nav .menu-btn {
+  display: none;
 }
 
 /* Hero Section */
@@ -106,6 +119,10 @@ nav .nav-links {
   cursor: pointer;
 }
 
+.hero button:hover {
+  background-color: #98f5f5;
+}
+
 .right {
   flex: 1;
 }
@@ -116,11 +133,17 @@ nav .nav-links {
   margin-left: 10rem;
 }
 /* URL Input Section */
-.url-background-container {
+.url-background-container .url-container {
   background-color: #3b3054;
-  padding: 2rem;
-  margin-top: -3rem;
-  border-radius: 10px;
+  background-image: url(images/bg-shorten-desktop.svg);
+  background-repeat: no-repeat;
+  gap: 1rem;
+  background-size: 100%;
+  display: f;
+  padding: 3rem 2.5rem;
+  margin: auto 0;
+  border-radius: 0.5rem;
+  position: relative;
 }
 
 .url-container {
@@ -141,9 +164,14 @@ nav .nav-links {
 
 .error-message {
   color: red;
-  font-size: 0.9rem;
-  margin-top: 0.3rem;
+  font-style: italic;
+  position: absolute;
+  bottom: 15px;
   display: none;
+}
+
+.error-message.error {
+  display: block;
 }
 
 #activate-btn {
@@ -151,13 +179,78 @@ nav .nav-links {
   color: white;
   border: none;
   padding: 1rem 2rem;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   font-weight: 700;
+}
+
+#activate-btn:hover {
+  background-color: #98f5f5;
 }
 
 #url-input.error {
   border: 2px solid red;
 }
+
+.item {
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.link-item-content {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.original-link {
+  font-size: 0.9rem;
+  color: #555;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 4rem;
+}
+
+.short-link {
+  color: #2acfcf;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.copy-link-btn {
+  background-color: #2acfcf;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.8rem;
+  min-width: 80px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Optional: Add hover effect */
+.copy-link-btn:hover {
+  opacity: 0.9;
+}
+
+/* For very small screens, you might want to add a media query */
 
 /* Advanced Statistics */
 .advanced-statistics {
@@ -168,8 +261,9 @@ nav .nav-links {
 
 .advanced-statistics h2 {
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #35323e;
+  margin-top: 100px;
 }
 
 .advanced-statistics p {
@@ -178,21 +272,29 @@ nav .nav-links {
   max-width: 500px;
 }
 
+.statistics-cards::before {
+  content: "";
+  position: absolute;
+  top: 50%; /* adjust this to align with icons */
+  display: block;
+  width: 80%;
+  height: 8px;
+  background-color: #2acfcf;
+}
+
 .statistics-cards {
-  display: flex;
-  flex-direction: row;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
-  margin-top: 3rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  position: relative;
 }
 
 .cards {
   background-color: white;
-  padding: 2rem;
-  border-radius: 8px;
+  padding: 3.5rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 0.5rem;
   text-align: left;
-  max-width: 300px;
   position: relative;
 }
 
@@ -201,6 +303,10 @@ nav .nav-links {
   padding: 1rem;
   border-radius: 50%;
   margin-bottom: 1rem;
+  position: absolute;
+  top: -2rem;
+  left: 2rem;
+  z-index: 2;
 }
 
 .cards h3 {
@@ -228,10 +334,15 @@ nav .nav-links {
 }
 
 /* Footer */
+
 footer {
   background-color: #232127;
   color: white;
   padding: 4rem 0 2rem;
+}
+
+footer .logo img {
+  filter: brightness(0) invert(1); /*cnverts dark image to white*/
 }
 
 .footer-grid {
