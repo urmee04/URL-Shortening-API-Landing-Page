@@ -17,6 +17,7 @@ Users should be able to:
 
 #### Project structure
 
+```bash
 url-shortening-api-master/
 ├── design/ # Design assets
 ├── images/ # Images used in the project (logos, icons, etc.)
@@ -25,6 +26,7 @@ url-shortening-api-master/
 ├── styles.css # CSS file for styling
 ├── .gitignore # Git ignore rules
 └── README.md # Project description and instructions
+```
 
 ---
 
