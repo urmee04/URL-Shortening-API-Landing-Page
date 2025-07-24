@@ -2,8 +2,6 @@
 
 This project aims to create a landing page that integrates with the [bitlyAPI](https://dev.bitly.com/) to shorten URLs, featuring a list of shortened links and the ability to copy them to the clipboard.
 
-![Design preview for the Shortly URL shortening API coding challenge](./design/desktop-preview.jpg)
-
 #### The challenge
 
 Users should be able to:
@@ -15,11 +13,26 @@ Users should be able to:
 - Receive an error message when the `form` is submitted if:
 - The `input` field is empty
 
+---
+
 #### Project structure
 
-#### Live Demo
+url-shortening-api-master/
+├── design/ # Design assets
+├── images/ # Images used in the project (logos, icons, etc.)
+├── index.html # Main HTML file
+├── main.js # JavaScript file for functionality
+├── styles.css # CSS file for styling
+├── .gitignore # Git ignore rules
+└── README.md # Project description and instructions
 
-- [URL sortening API Landing Page](https://url-shortening-api-landing-page-ra.netlify.app/)
+---
+
+#### Live Demo Link
+
+- [URL Shortening API Landing Page](https://url-shortening-api-landing-page-ra.netlify.app/)
+
+---
 
 #### Project Reflection
 
