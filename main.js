@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const errMessage = document.getElementById("error-message");
   const activateBtn = document.getElementById("activate-btn");
   const linksHistory = document.getElementById("link-history");
+  const menuBtn = document.querySelector(".menu-btn");
+  const navLinks = document.querySelector(".nav-links");
 
   // Load stored links on page load
   const savedLinks = JSON.parse(localStorage.getItem("shortenedLinks")) || [];
@@ -96,6 +98,10 @@ document.addEventListener("DOMContentLoaded", function () {
     saved.push({ original, short });
     localStorage.setItem("shortenedLinks", JSON.stringify(saved));
   }
+
+  menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
 
   activateBtn.addEventListener("click", () => {
     const userURL = getUrlInput();
