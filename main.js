@@ -112,6 +112,10 @@ document.addEventListener("DOMContentLoaded", function () {
       urlInput.classList.add("error");
       return;
     }
+    //Check if the URL is missing a protocol and add it
+    if (!userURL.startsWith("http://") && !userURL.startsWith("https://")) {
+      userURL = `https://${userURL}`;
+    }
     //Validate URL format
     if (!isValidURL(userURL)) {
       errMessage.textContent = "Please enter a valid URL";
