@@ -1,5 +1,3 @@
-import BITLY_API_KEY from "./apiKey";
-
 //DOMContentLoaded event to ensure all HTML is loaded before running script
 document.addEventListener("DOMContentLoaded", function () {
   const urlInput = document.getElementById("url-input");
@@ -36,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const res = await fetch(apiUrl, {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${BITLY_API_KEY}`,
+          Authorization: `Bearer db70f8460a21849ff4715f1325cc5fb312a714ba`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ long_url: urlLink }),
@@ -103,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const userURL = getUrlInput();
     //Check if input is empty
     if (!userURL) {
-      errMessage.textContent = "Please enter a valid link";
+      errMessage.textContent = "Please add a link";
       errMessage.style.display = "block";
       urlInput.classList.add("error");
       return;
