@@ -21,7 +21,7 @@ body {
 /* Header */
 header {
   background-color: white;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 nav {
@@ -394,4 +394,128 @@ footer .logo img {
 .attribution a {
   color: #2acfcf;
   text-decoration: none;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+  }
+
+  nav .nav-links {
+    display: none;
+  }
+
+  .nav-auth {
+    display: none;
+  }
+
+  nav .menu-btn {
+    display: block;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero .left button {
+    margin: auto;
+  }
+
+  .hero .right {
+    grid-row: 1;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .right {
+    margin: 0;
+  }
+
+  .right img {
+    margin: 0 auto;
+  }
+
+  .url-background-container .url-container {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    background-image: url(images/bg-shorten-mobile.svg);
+    background-size: cover;
+  }
+
+  #url-input {
+    width: 100%;
+  }
+
+  #activate-btn {
+    width: 100%;
+  }
+
+  .link-item-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .original-link {
+    padding-right: 0;
+    margin-right: 0;
+    width: 100%;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+
+  .link-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .short-link {
+    display: block;
+    width: 100%;
+  }
+
+  .copy-link-btn {
+    width: 100%;
+  }
+
+  .statistics-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .statistics-cards::before {
+    top: 0;
+    left: 50%;
+    width: 8px;
+    height: 100%;
+    transform: translateX(-50%);
+  }
+
+  .cards {
+    text-align: center;
+    padding: 3rem 1rem 1.5rem 1rem;
+  }
+
+  .cards img {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 2rem;
+  }
+
+  .footer-section a.social-media-icon {
+    display: inline-block;
+  }
 }
