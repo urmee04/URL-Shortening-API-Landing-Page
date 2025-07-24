@@ -28,10 +28,10 @@
     <header>
       <div class="container">
         <!-- Navigation Bar -->
-        <nav>
+        <nav aria-label="Primary Navigation">
           <!-- Logo -->
           <div class="logo">
-            <img src="images/logo.svg" alt="" />
+            <img src="images/logo.svg" alt="Shortly logo" />
           </div>
 
           <!-- Navigation Links -->
@@ -40,20 +40,28 @@
             <li><a href="#">Pricing</a></li>
             <li><a href="#">Resources</a></li>
           </ul>
+
           <!-- Authentication Buttons in Navbar -->
           <div class="nav-auth">
             <a href="#" class="login-btn">Log In</a>
             <a href="#" class="signup-btn">Sign Up</a>
           </div>
-          <div class="menu-btn">
-            <i class="ri-menu-line"></i>
-          </div>
+
+          <!-- Hamburger menu button with keyboard access and label -->
+          <button class="menu-btn" aria-label="Toggle menu">
+            <i class="ri-menu-line" aria-hidden="true"></i>
+          </button>
         </nav>
       </div>
     </header>
+
     <!-- Main Content -->
     <main>
-      <div class="hero-section">
+      <!-- Hero Section -->
+      <section
+        class="hero-section"
+        aria-label="Hero section with heading and call to action"
+      >
         <div class="container">
           <div class="hero">
             <!-- Left Side Content -->
@@ -63,8 +71,9 @@
                 Build your brand’s recognition and get detailed insights on how
                 your links are performing.
               </p>
-              <button>Get Started</button>
+              <button aria-label="Get started with Shortly">Get Started</button>
             </div>
+
             <!-- Right Side Image in Hero Section -->
             <div class="right">
               <img
@@ -74,11 +83,13 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- URL Shortener Section Background -->
-      <div class="url-background-container">
-        <!-- Centered Container -->
+      <section
+        class="url-background-container"
+        aria-label="URL shortener section"
+      >
         <div class="container">
           <div class="url-container">
             <!-- Input Field for URL -->
@@ -86,21 +97,26 @@
               id="url-input"
               type="text"
               placeholder="Shorten a link here..."
+              aria-label="URL input field"
             />
 
             <!-- Button to Activate URL Shortening -->
-            <button id="activate-btn">Shorten It!</button>
+            <button id="activate-btn" aria-label="Shorten the entered URL">
+              Shorten It!
+            </button>
 
-            <p id="error-message" class="error-message"></p>
+            <!-- Error message container with alert role for screen readers -->
+            <p id="error-message" class="error-message" role="alert"></p>
           </div>
         </div>
-      </div>
+      </section>
+
       <!-- Advanced Statistics Section -->
-      <div class="advanced-statistics">
+      <section class="advanced-statistics" aria-labelledby="statistics-heading">
         <div class="container">
           <div class="link-history" id="link-history"></div>
           <div class="info">
-            <h2>Advanced Statistics</h2>
+            <h2 id="statistics-heading">Advanced Statistics</h2>
             <p>
               Track how your links are performing accross the web within our
               advanced statistics dashboard.
@@ -109,60 +125,75 @@
 
           <!-- Cards Section Displaying Key Features -->
           <div class="statistics-cards">
-            <div class="cards">
-              <img src="images/icon-brand-recognition.svg" alt="" />
+            <article class="cards">
+              <img
+                src="images/icon-brand-recognition.svg"
+                alt="Brand recognition icon"
+              />
               <h3>Brand Recognition</h3>
               <p>
                 Boost your brand recognition with each click. Generic links
                 don’t mean a thing. Branded links help instil confidence in your
                 content.
               </p>
-            </div>
+            </article>
 
-            <div class="cards">
-              <img src="images/icon-detailed-records.svg" alt="" />
+            <article class="cards">
+              <img
+                src="images/icon-detailed-records.svg"
+                alt="Detailed records icon"
+              />
               <h3>Detailed Records</h3>
               <p>
                 Gain insights into who is clicking your links. Knowing when and
                 where people engage with your content helps inform better
                 decisions.
               </p>
-            </div>
-            <div class="cards">
-              <img src="images/icon-fully-customizable.svg" alt="" />
+            </article>
+
+            <article class="cards">
+              <img
+                src="images/icon-fully-customizable.svg"
+                alt="Fully customizable icon"
+              />
               <h3>Fully Customizable</h3>
               <p>
                 Improve brand awareness and content discoverability through
                 customizable links, supercharging audience engagement.
               </p>
-            </div>
+            </article>
           </div>
         </div>
-      </div>
+      </section>
+
       <!-- Boost Section -->
-      <div class="boost-links">
+      <section class="boost-links" aria-label="Boost links call-to-action">
         <h2>Boost your links today</h2>
         <!-- Call-to-Action Button -->
-        <button>Get Started</button>
-      </div>
+        <button aria-label="Get started boosting your links">
+          Get Started
+        </button>
+      </section>
     </main>
+
     <!-- Footer Section -->
     <footer>
       <div class="container">
         <div class="footer-grid">
           <div class="logo">
-            <img src="images/logo.svg" alt="" />
+            <img src="images/logo.svg" alt="Shortly logo" />
           </div>
 
           <!-- Features Links -->
           <div class="footer-section">
-            <h4>features</h4>
+            <h4>Features</h4>
             <ul>
               <li><a href="#">Link shortening</a></li>
               <li><a href="#">Branded links</a></li>
               <li><a href="#">Analytics</a></li>
             </ul>
           </div>
+
           <!-- Resources Links -->
           <div class="footer-section">
             <h4>Resources</h4>
@@ -172,6 +203,7 @@
               <li><a href="#">Support</a></li>
             </ul>
           </div>
+
           <!-- Company Links -->
           <div class="footer-section">
             <h4>Company</h4>
@@ -182,31 +214,35 @@
               <li><a href="#">Contact</a></li>
             </ul>
           </div>
-          <!-- Social media icons section in the footer -->
 
-          <div class="footer-section">
-            <a href="#" class="social-media-icon">
-              <img src="images/icon-facebook.svg" alt="facbook" />
+          <!-- Social media icons section in the footer -->
+          <div class="footer-section" aria-label="Social media links">
+            <a href="#" class="social-media-icon" aria-label="Facebook">
+              <img src="images/icon-facebook.svg" alt="Facebook" />
             </a>
-            <a href="#" class="social-media-icon">
-              <img src="images/icon-twitter.svg" alt="twitter" />
+            <a href="#" class="social-media-icon" aria-label="Twitter">
+              <img src="images/icon-twitter.svg" alt="Twitter" />
             </a>
-            <a href="#" class="social-media-icon">
-              <img src="images/icon-pinterest.svg" alt="pinterest" />
+            <a href="#" class="social-media-icon" aria-label="Pinterest">
+              <img src="images/icon-pinterest.svg" alt="Pinterest" />
             </a>
-            <a href="#" class="social-media-icon">
-              <img src="images/icon-instagram.svg" alt="instagram" />
+            <a href="#" class="social-media-icon" aria-label="Instagram">
+              <img src="images/icon-instagram.svg" alt="Instagram" />
             </a>
           </div>
         </div>
       </div>
     </footer>
+
+    <!-- Attribution Note -->
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Romana Akter</a>.
     </div>
+
+    <!-- JavaScript -->
     <script src="main.js"></script>
   </body>
 </html>
