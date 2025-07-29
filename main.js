@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
     saved.push({ original, short });
     localStorage.setItem("shortenedLinks", JSON.stringify(saved));
   }
-
+  //Toggle the menu for both links and auth buttons
   menuBtn.addEventListener("click", () => {
     navLinks.classList.toggle("active");
   });
