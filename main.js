@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   activateBtn.addEventListener("click", () => {
-    const userURL = getUrlInput();
+    let userURL = getUrlInput();
     //Check if input is empty
     if (!userURL) {
       errMessage.textContent = "Please add a link";
